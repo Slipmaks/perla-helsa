@@ -3,12 +3,12 @@
     <div class="navbar">
       <div class="container-fluid navbar-logo">
         <div class="navbar-logo-icons">
-          <font-awesome-icon icon="fa-solid fa-bars fa-xl" />
-          <font-awesome-icon icon="fa-solid fa-magnifying-glass fa-xl" />
+          <font-awesome-icon icon="fa-solid fa-bars " />
+          <font-awesome-icon icon="fa-solid fa-magnifying-glass " />
         </div>
         <img class="navbar-brand" src="~/assets/Logo.svg" />
         <div class="navbar-logo-icons">
-          <font-awesome-icon icon="fa-solid fa-cart-shopping fa-xl" />
+          <font-awesome-icon icon="fa-solid fa-cart-shopping" />
           <font-awesome-icon icon="fa-solid fa-phone" />
         </div>
       </div>
@@ -53,13 +53,21 @@ nav {
     &-icons {
       display: flex;
       gap: 1rem;
+      & svg {
+        cursor: pointer;
+      }
     }
   }
 }
-.nav-item {
-  font-weight: 400;
-  font-style: normal;
-  font-size: 23px;
+.nav {
+  &-item {
+    font-weight: 400;
+    font-style: normal;
+    font-size: 23px;
+  }
+  &-link {
+    color: #000000;
+  }
 }
 .svg-inline--fa {
   width: 24px;
