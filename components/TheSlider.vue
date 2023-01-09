@@ -7,13 +7,19 @@
   >
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="..." class="d-block w-100" alt="..." />
+        <img src="~/assets/1_cod.png" class="d-block w-100" alt="" />
       </div>
       <div class="carousel-item">
-        <img src="..." class="d-block w-100" alt="..." />
+        <img src="~/assets/2_cod.png" class="d-block w-100" alt="" />
       </div>
       <div class="carousel-item">
-        <img src="..." class="d-block w-100" alt="..." />
+        <img src="~/assets/3_cod.png" class="d-block w-100" alt="" />
+      </div>
+      <div class="carousel-item">
+        <img src="~/assets/4_cod.png" class="d-block w-100" alt="" />
+      </div>
+      <div class="carousel-item">
+        <img src="~/assets/5_cod.png" class="d-block w-100" alt="" />
       </div>
     </div>
     <button
@@ -36,3 +42,11 @@
     </button>
   </div>
 </template>
+<script setup>
+// import * as Bootstrap from "bootstrap";
+// console.log($bootstrap);
+// onMounted(() => {
+//   let myCarousel = document.querySelector("#carouselExampleControls");
+//   new Bootstrap.Carousel(myCarousel);
+// });
+</script>

@@ -14,5 +14,8 @@
 .product {
   display: flex;
   justify-content: space-between;
+  &-slider {
+    width: 640px;
+  }
 }
 </style>
