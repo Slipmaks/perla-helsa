@@ -182,7 +182,7 @@
           <h2>{{ currentPrice }} ₴</h2>
         </div>
       </div>
-      <div class="d-flex flex-row justify-content-between">
+      <div class="d-flex flex-row justify-content-between mt-5">
         <div class="product__to-cart-count d-flex align-items-center">
           <button @click="decreaseCount" :disabled="count == 1">-</button>
           <input type="text" v-model="count" />
@@ -254,6 +254,12 @@ const decreaseCount = () => {
     }
     &-add {
       & button {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 27px;
+        width: 415px;
+        text-align: center;
+        padding: 16px 0;
         border: none;
         outline: none;
         background: rgba(105, 197, 34, 1);
@@ -266,14 +272,17 @@ const decreaseCount = () => {
         border: none;
         outline: none;
         background: none;
-        font-size: 40px;
-        line-height: 7px;
+        font-size: 20px;
+        width: 40px;
         color: $light-blue;
         &:hover {
           color: $main-blue;
         }
       }
       & input {
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 35px;
         text-align: center;
         width: 46px;
         height: 46px;

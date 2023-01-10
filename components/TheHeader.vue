@@ -3,13 +3,17 @@
     <div class="navbar">
       <div class="container-fluid navbar-logo">
         <div class="navbar-logo-icons">
-          <font-awesome-icon icon="fa-solid fa-bars " />
-          <font-awesome-icon icon="fa-solid fa-magnifying-glass " />
+          <!-- <font-awesome-icon icon="fa-solid fa-bars " />
+          <font-awesome-icon icon="fa-solid fa-magnifying-glass " /> -->
+          <img src="~/assets/burger-desk.svg" alt="" />
+          <img src="~/assets/search.svg" alt="" />
         </div>
         <img class="navbar-brand" src="~/assets/Logo.svg" />
         <div class="navbar-logo-icons">
-          <font-awesome-icon icon="fa-solid fa-cart-shopping" />
-          <font-awesome-icon icon="fa-solid fa-phone" />
+          <img src="~/assets/phone.svg" alt="" />
+          <img src="~/assets/cart.svg" alt="" />
+          <!-- <font-awesome-icon icon="fa-solid fa-phone" />
+          <font-awesome-icon icon="fa-solid fa-cart-shopping" /> -->
         </div>
       </div>
       <nav class="container-fluid d-none d-xl-block">
