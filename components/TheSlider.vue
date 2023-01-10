@@ -1,5 +1,4 @@
 <template>
-  <h1>slide</h1>
   <div
     id="carouselExampleControls"
     class="carousel slide"
@@ -43,10 +42,10 @@
   </div>
 </template>
 <script setup>
-// import * as Bootstrap from "bootstrap";
-// console.log($bootstrap);
-// onMounted(() => {
-//   let myCarousel = document.querySelector("#carouselExampleControls");
-//   new Bootstrap.Carousel(myCarousel);
-// });
+import * as Bootstrap from "bootstrap";
+
+onMounted(() => {
+  let myCarousel = document.querySelector("#carouselExampleControls");
+  new Bootstrap.Carousel(myCarousel);
+});
 </script>
