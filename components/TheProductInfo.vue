@@ -1,5 +1,5 @@
 <template>
-  <div class="d-flex align-items-center justify-center">
+  <div class="product-header d-flex align-items-center justify-center">
     <h1 style="font-weight: 700">
       Омега-3
       <i style="font-weight: 400; font-family: ''Piazzolla' serif">Тріска</i>
@@ -17,7 +17,7 @@
     >
       <li class="nav-item" role="presentation">
         <span
-          class="product__tab-button"
+          class="product__tab-button active"
           id="pills-description-tab"
           data-bs-toggle="pill"
           data-bs-target="#pills-description"
@@ -169,16 +169,32 @@
 </template>
 <style scoped lang="scss">
 .product {
+  &-header {
+    color: #00284f;
+  }
   &__tab {
     &-buttons {
       border-bottom: 1px solid rgba(0, 40, 79, 0.3);
     }
     &-button {
       font-size: 17px;
+
+      &:hover {
+        border-top: 1px solid rgba(0, 40, 79, 0.3);
+      }
+      &.active {
+        border-top: 1px solid rgba(0, 40, 79, 0.3);
+      }
     }
   }
   &-overview {
     margin-top: 32px;
+    color: #00284f;
+  }
+}
+.tab-pane {
+  & td {
+    width: 50%;
   }
 }
 </style>
