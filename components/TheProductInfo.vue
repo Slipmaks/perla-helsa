@@ -180,20 +180,20 @@
           </div>
         </div>
         <div
-          class="product__to-cart-price d-lg-flex gap-4 align-items-center d-none"
+          class="product__to-cart-price d-md-flex gap-4 align-items-center d-none"
         >
           <h2>963 ₴</h2>
           <h2>{{ currentPrice }} ₴</h2>
         </div>
       </div>
       <div class="">
-        <div class="product__to-cart-count d-lg-flex align-items-center d-none">
+        <div class="product__to-cart-count d-md-flex align-items-center d-none">
           <button @click="decreaseCount" :disabled="count == 1">-</button>
           <input type="text" v-model="count" />
           <button @click="increaseCount">+</button>
         </div>
         <div class="product__to-cart-add">
-          <button>
+          <button @click="byProduct">
             До кошика<span class="d-lg-none"> - {{ currentPrice }} ₴</span>
           </button>
         </div>
@@ -202,6 +202,8 @@
   </div>
 </template>
 <script setup>
+import { mainStore } from "~~/stores/main";
+const store = mainStore();
 const count = ref(1);
 const currentPrice = computed(() => {
   return count.value * 489;
@@ -211,6 +213,9 @@ const increaseCount = () => {
 };
 const decreaseCount = () => {
   count.value = count.value - 1;
+};
+const byProduct = () => {
+  store.addToCart(count.value);
 };
 </script>
 <style scoped lang="scss">

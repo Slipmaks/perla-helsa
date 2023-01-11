@@ -11,7 +11,15 @@
         <img class="navbar-brand" src="~/assets/Logo.svg" />
         <div class="navbar-logo-icons">
           <img src="~/assets/phone.svg" alt="" />
-          <img src="~/assets/cart.svg" alt="" />
+          <span class="position-relative">
+            <img src="~/assets/cart.svg" alt="" />
+            <span
+              v-if="store.cart"
+              class="position-absolute top-0 start-100 translate-middle badge rounded-circle badge-cart"
+              >{{ store.cart }}
+              <span class="visually-hidden">unread messages</span>
+            </span>
+          </span>
           <!-- <font-awesome-icon icon="fa-solid fa-phone" />
           <font-awesome-icon icon="fa-solid fa-cart-shopping" /> -->
         </div>
@@ -40,7 +48,15 @@
     </div>
   </div>
 </template>
+<script setup>
+import { mainStore } from "~/stores/main";
+const store = mainStore();
+</script>
 <style lang="scss">
+.badge-cart {
+  color: #000;
+  background-color: #f5f352;
+}
 nav {
   max-width: 636px;
 }
