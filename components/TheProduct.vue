@@ -5,7 +5,9 @@
         <TheProductInfo />
       </div>
       <div class="product-slider">
-        <TheSlider />
+        <ClientOnly fallback-tag="span" fallback="Loading...">
+          <TheSlider />
+        </ClientOnly>
       </div>
     </div>
   </div>

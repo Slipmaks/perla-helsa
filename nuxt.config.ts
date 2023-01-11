@@ -2,7 +2,7 @@
 
 export default defineNuxtConfig({
   modules: ["bootstrap-vue-3/nuxt", "@vueuse/nuxt", "@pinia/nuxt"],
-  ssr: false,
+  ssr: true,
 
   // plugins: ["~/plugins/bootstrap.js"],
   vite: {
