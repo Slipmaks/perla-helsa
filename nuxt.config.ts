@@ -1,8 +1,9 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
 export default defineNuxtConfig({
-  modules: ["bootstrap-vue-3/nuxt", "@vueuse/nuxt"],
+  modules: ["bootstrap-vue-3/nuxt", "@vueuse/nuxt", "@pinia/nuxt"],
   ssr: false,
+
   // plugins: ["~/plugins/bootstrap.js"],
   vite: {
     define: {
