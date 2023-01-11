@@ -1,10 +1,11 @@
 <template>
-  <div class="product-header d-flex align-items-center justify-center">
+  <div class="product-header">
     <h1 style="font-weight: 700">
       Омега-3
       <i style="font-weight: 400; font-family: 'Piazzolla' serif">Тріска</i>
     </h1>
-    <span class="badge rounded-pill bg-light text-dark px-5 py-2 ms-4"
+
+    <span class="badge rounded-pill bg-light text-dark"
       >з вітамінами А і D3</span
     >
   </div>
@@ -165,11 +166,12 @@
         </p>
       </div>
     </div>
-    <div class="product__to-cart d-flex flex-column">
-      <div class="d-flex flex-row justify-content-between align-items-center">
-        <div
-          class="product__to-cart-in-package d-flex align-items-center gap-5"
-        >
+    <div class="d-block d-lg-none">
+      <strong><u>Дізнатись більше</u></strong>
+    </div>
+    <div class="product__to-cart">
+      <div class="">
+        <div class="product__to-cart-in-package">
           <img src="~/assets/foil 1.svg" alt="" />
           <div>
             <h2>В упаковці:</h2>
@@ -177,19 +179,23 @@
             <p>1 місяць прийому</p>
           </div>
         </div>
-        <div class="product__to-cart-price d-flex gap-4 align-items-center">
+        <div
+          class="product__to-cart-price d-lg-flex gap-4 align-items-center d-none"
+        >
           <h2>963 ₴</h2>
           <h2>{{ currentPrice }} ₴</h2>
         </div>
       </div>
-      <div class="d-flex flex-row justify-content-between mt-5">
-        <div class="product__to-cart-count d-flex align-items-center">
+      <div class="">
+        <div class="product__to-cart-count d-lg-flex align-items-center d-none">
           <button @click="decreaseCount" :disabled="count == 1">-</button>
           <input type="text" v-model="count" />
           <button @click="increaseCount">+</button>
         </div>
         <div class="product__to-cart-add">
-          <button>До кошика</button>
+          <button>
+            До кошика<span class="d-lg-none"> - {{ currentPrice }} ₴</span>
+          </button>
         </div>
       </div>
     </div>
@@ -212,13 +218,29 @@ const decreaseCount = () => {
 .product {
   &-header {
     color: $main-blue;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    & h1 {
+      font-size: 25px;
+      line-height: 32px;
+      margin: 0;
+    }
+    & span {
+      font-size: 16px;
+      line-height: 20px;
+      padding: 2px 20px;
+      margin: 0;
+    }
   }
   &__tab {
     &-buttons {
       border-bottom: 1px solid $light-blue;
     }
     &-button {
-      font-size: 17px;
+      font-size: 11px;
+      line-height: 14px;
+      font-weight: 700;
       color: $light-blue;
       transition: color 0.6s;
       &:hover {
@@ -236,14 +258,22 @@ const decreaseCount = () => {
     color: $main-blue;
   }
   &__to-cart {
-    margin-top: 56px;
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 24px;
+
+    align-items: center;
     &-in-package {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      font-size: 16px;
+      line-height: 18px;
       & img {
         width: 40px;
         height: 40px;
       }
-      font-size: 18px;
-      line-height: 23px;
+
       & div p,
       h2 {
         margin: 0;
@@ -253,11 +283,12 @@ const decreaseCount = () => {
       }
     }
     &-add {
+      width: 100%;
       & button {
         font-weight: 500;
         font-size: 18px;
-        line-height: 27px;
-        width: 415px;
+        line-height: 23px;
+        width: 384px;
         text-align: center;
         padding: 16px 0;
         border: none;
@@ -265,6 +296,7 @@ const decreaseCount = () => {
         background: rgba(105, 197, 34, 1);
         color: #ffffff;
         border-radius: 40px;
+        margin-bottom: 32px;
       }
     }
     &-count {
@@ -318,8 +350,81 @@ const decreaseCount = () => {
   }
 }
 .tab-pane {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+
   & td {
     width: 50%;
+    border-bottom: 1px solid #1d1d1b;
+    padding: 7px;
+    & p {
+      padding: 0;
+      margin: 0;
+    }
+  }
+}
+@media (min-width: 768px) {
+  .tab-pane {
+    font-size: 18px;
+    line-height: 26px;
+  }
+  .product {
+    &-header {
+      flex-direction: row;
+      align-items: center;
+      gap: 24px;
+      & h1 {
+        font-size: 40px;
+        line-height: 48px;
+      }
+      & span {
+        font-size: 22px;
+        line-height: 22px;
+        padding: 5px 24px;
+      }
+    }
+    &__tab {
+      &-button {
+        font-size: 17px;
+        line-height: 22px;
+      }
+    }
+    &__to-cart {
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+      & > div {
+        width: 100%;
+        display: flex;
+
+        justify-content: space-between;
+      }
+      &-add {
+        width: auto;
+        margin-left: auto;
+        & button {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 1200px) {
+  .tab-pane {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  .product {
+    &-header {
+      & h1 {
+        font-size: 40px;
+        line-height: 51px;
+      }
+      & span {
+        padding: 8px 52px;
+      }
+    }
   }
 }
 </style>

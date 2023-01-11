@@ -14,9 +14,18 @@
 .product {
   display: flex;
   justify-content: space-between;
+  flex-direction: column-reverse;
+  gap: 24px;
   &-slider,
   &-info {
-    width: 50%;
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+}
+@media (min-width: 1200px) {
+  .product {
+    flex-direction: row;
   }
 }
 </style>

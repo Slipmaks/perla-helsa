@@ -8,22 +8,39 @@
 <style scoped lang="scss">
 .code-background {
   background: rgba(153, 175, 255, 1);
-  height: 44px;
+  height: 28px;
   display: flex;
   align-items: center;
   justify-content: center;
   & h2 {
-    margin-bottom: 0px;
+    margin: 0;
     color: white;
     font-weight: 500;
     font-size: 14px;
     line-height: 22px;
   }
   & img {
-    max-width: 22px;
+    width: 14px;
+    height: 14px;
     margin: 0 13px;
   }
-  @media (min-width: 1200px) {
+}
+@media (min-width: 768px) {
+  .code-background {
+    height: 30px;
+    & h2 {
+      font-size: 14px;
+      line-height: 20px;
+    }
+    & img {
+      width: 15px;
+      height: 15px;
+    }
+  }
+}
+@media (min-width: 1200px) {
+  .code-background {
+    height: 44px;
     & h2 {
       font-size: 20px;
       line-height: 24px;

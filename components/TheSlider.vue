@@ -29,6 +29,7 @@
     >
       <span class="carousel-control-prev-icon" aria-hidden="true">
         <svg
+          class="d-none d-xl-block"
           width="22"
           height="16"
           viewBox="0 0 22 16"
@@ -52,6 +53,7 @@
     >
       <span class="carousel-control-next-icon" aria-hidden="true">
         <svg
+          class="d-none d-xl-block"
           width="22"
           height="16"
           viewBox="0 0 22 16"
@@ -80,45 +82,83 @@ onMounted(() => {
 .carousel {
   &-item {
     & img {
-      width: 500px;
+      width: 285px;
       margin: auto;
-      height: 450px;
+      height: 174px;
     }
   }
   &-control {
+    &-next {
+      width: auto;
+      right: 0%;
+    }
     &-prev {
-      width: 69px;
-      height: 56px;
-      right: 70px;
-      left: inherit;
-      top: inherit;
-      bottom: 0;
-      margin: -30px;
-      transform: none;
-      fill: #00284f80;
-      &:hover {
-        fill: #69c522;
-      }
-      &-icon {
-        width: 22px;
-        height: 16px;
+      width: auto;
+      left: 0%;
+    }
+  }
+}
+@media (min-width: 768px) {
+  .carousel {
+    &-item {
+      & img {
+        width: 400px;
+
+        height: 236px;
       }
     }
-    &-next {
-      width: 69px;
-      height: 56px;
-      right: 0px;
-      transform: none;
-      top: inherit;
-      bottom: 0;
-      margin: -30px;
-      fill: #00284f80;
-      &:hover {
-        fill: #69c522;
+    &-control {
+      &-next {
       }
-      &-icon {
-        width: 22px;
-        height: 16px;
+      &-prev {
+      }
+    }
+  }
+}
+@media (min-width: 1200px) {
+  .carousel {
+    &-item {
+      & img {
+        width: 500px;
+
+        height: 450px;
+      }
+    }
+    &-control {
+      &-prev {
+        width: 69px;
+        height: 56px;
+        right: 70px;
+        left: inherit;
+        top: inherit;
+        bottom: 0;
+        margin: -30px;
+        transform: none;
+        fill: #00284f80;
+        &:hover {
+          fill: #69c522;
+        }
+        &-icon {
+          width: 22px;
+          height: 16px;
+        }
+      }
+      &-next {
+        width: 69px;
+        height: 56px;
+        right: 0px;
+        transform: none;
+        top: inherit;
+        bottom: 0;
+        margin: -30px;
+        fill: #00284f80;
+        &:hover {
+          fill: #69c522;
+        }
+        &-icon {
+          width: 22px;
+          height: 16px;
+        }
       }
     }
   }

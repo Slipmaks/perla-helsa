@@ -16,7 +16,7 @@
           <font-awesome-icon icon="fa-solid fa-cart-shopping" /> -->
         </div>
       </div>
-      <nav class="container-fluid d-none d-xl-block">
+      <nav class="container-fluid d-none d-md-block">
         <!-- <div class="collapse navbar-collapse"> -->
         <ul class="navbar-nav">
           <li class="nav-item">
@@ -57,9 +57,13 @@ nav {
     &-icons {
       display: flex;
       gap: 1rem;
-      & svg {
+      & img {
         cursor: pointer;
+        width: 21px;
       }
+      // & svg {
+      //   cursor: pointer;
+      // }
     }
   }
 }
@@ -76,6 +80,33 @@ nav {
 .svg-inline--fa {
   width: 24px;
   height: 24px;
+}
+@media (min-width: 768px) {
+  .navbar {
+    &-nav {
+    }
+    &-logo {
+      &-icons {
+        & img {
+          width: 25px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .navbar {
+    &-nav {
+    }
+    &-logo {
+      &-icons {
+        & img {
+          width: 26px;
+        }
+      }
+    }
+  }
 }
 </style>
 <script setup></script>
