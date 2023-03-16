@@ -2,21 +2,21 @@
   <div class="container">
     <div class="delivery-main">
       <div class="delivery-main__content">
-        <img src="~/assets/free delivery.svg" alt="" />
+        <img src="_nuxt//assets/free delivery.svg" alt="" />
         <p>
           Безкоштовна доставка <br />
           від 1800 грн
         </p>
       </div>
       <div class="delivery-main__content">
-        <img src="~/assets/delivery 16.svg" alt="" />
+        <img src="_nuxt//assets/delivery 16.svg" alt="" />
         <p>
           Відправки в день оформлення <br />
           замовлення до 16:00
         </p>
       </div>
       <div class="delivery-main__content">
-        <img src="~/assets/cash return.svg" alt="" />
+        <img src="_nuxt//assets/cash return.svg" alt="" />
         <p>
           Гарантія повернення <br />
           грошових коштів

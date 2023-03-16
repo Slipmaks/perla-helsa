@@ -172,7 +172,7 @@
     <div class="product__to-cart">
       <div class="">
         <div class="product__to-cart-in-package">
-          <img src="~/assets/foil 1.svg" alt="" />
+          <img src="_nuxt/assets/foil 1.svg" alt="" />
           <div>
             <h2>В упаковці:</h2>
             <p>120 капсул по 500мг</p>

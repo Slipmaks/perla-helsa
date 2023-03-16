@@ -1,5 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-
+import { defineNuxtConfig } from "nuxt/config";
 export default defineNuxtConfig({
   modules: ["bootstrap-vue-3/nuxt", "@vueuse/nuxt", "@pinia/nuxt"],
   ssr: true,

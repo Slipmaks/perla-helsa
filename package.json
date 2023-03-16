@@ -1,5 +1,6 @@
 {
   "private": true,
+  "name": "my-app",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -13,7 +14,7 @@
     "@vueuse/nuxt": "^9.10.0",
     "bootstrap": "^5.2.3",
     "bootstrap-vue-3": "^0.5.1",
-    "nuxt": "^3.0.0",
+    "nuxt": "^3.3.1",
     "sass": "^1.57.1",
     "sass-loader": "^13.2.0"
   },
@@ -23,7 +24,10 @@
     "@fortawesome/free-regular-svg-icons": "^6.2.1",
     "@fortawesome/free-solid-svg-icons": "^6.2.1",
     "@fortawesome/vue-fontawesome": "^3.0.2",
-    "@pinia/nuxt": "^0.4.6",
-    "pinia": "^2.0.28"
+    "@pinia/nuxt": "^0.4.7",
+    "pinia": "^2.0.33"
+  },
+  "overrides": {
+    "vue": "latest"
   }
 }

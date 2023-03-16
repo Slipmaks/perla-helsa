@@ -1,8 +1,8 @@
 <template>
   <div class="code-background">
-    <img src="~/assets/drugs.svg" alt="" />
+    <img src="_nuxt/assets/drugs.svg" alt="" />
     <h2>Безкоштовна досавка від 1800 грн</h2>
-    <img src="~/assets/drugs.svg" alt="" />
+    <img src="_nuxt/assets/drugs.svg" alt="" />
   </div>
 </template>
 <style scoped lang="scss">
